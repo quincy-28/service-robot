@@ -1,2 +1,4 @@
 # service-robot
 Automation of a robot in an indoor environment to aid with chores
+
+This C++ code defines a ROS 2 node named Stopper, which controls a robot's movement using velocity commands while processing odometry and laser scan data. The node subscribes to the /odom topic to track the robot's position and orientation, and the /scan topic to analyze laser sensor readings for obstacle detection. The robot moves through predefined stages using velocity commands, adjusting its movement based on detected landmarks and obstacles. The program also logs odometry, velocity, and laser scan data into CSV files. The EulerAngles and Quaternion structures help convert orientation data, and a transformMapPoint function calculates mapped coordinates from laser readings. The main function initializes the ROS node and starts the robot’s movement loop.
